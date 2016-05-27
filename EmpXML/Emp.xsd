@@ -6,15 +6,16 @@
 
 	<complexType name="emptype">
 		<sequence>
-			<element name="id" type="tns:ID" />
+			<element name="id" type="tns:ID" minOccurs="0" maxOccurs="2"/>
 			<element name="firstname" type="string" />
 			<element name="lastname" type="tns:StringLimit" />
 			<element name="dob" type="date" />
 			<element name="gender" type="tns:GenderLimit" />
-			<element name="salary" type="float" />
 			<element name="Email" type="string" />
+			<element name="salary" type="tns:salarytype" />
 		</sequence>
 	</complexType>
+
 	<simpleType name="ID">
 		<restriction base="int">
 			<pattern value="[0-9]{6}"></pattern>
@@ -31,6 +32,16 @@
 			<enumeration value="F"></enumeration>
 		</restriction>
 	</simpleType>
-	
 
+	<complexType name="salarytype">
+		<choice>
+			<element name="cash" type="float"></element>
+			<element name="directdeposit" type="tns:bank"></element>
+		</choice>
+	</complexType>
+	<complexType name="bank">
+		<all>
+			<element name="Bank" type="string"></element>
+		</all>
+	</complexType>
 </schema>
