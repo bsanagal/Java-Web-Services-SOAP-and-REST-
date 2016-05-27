@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Emp"
-	xmlns:tns="http://www.example.org/Emp" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://bhargavramreddysanagala.me/Emp"
+	xmlns:tns="http://bhargavramreddysanagala.me/Emp" elementFormDefault="qualified">
+
+	<element name="employee" type="tns:emptype"></element>
+
+	<complexType name="emptype">
+		<sequence>
+			<element name="id" type="tns:ID" />
+			<element name="firstname" type="string" />
+			<element name="lastname" type="tns:StringLimit" />
+			<element name="dob" type="date" />
+			<element name="gender" type="tns:GenderLimit" />
+			<element name="salary" type="float" />
+			<element name="Email" type="string" />
+		</sequence>
+	</complexType>
+	<simpleType name="ID">
+		<restriction base="int">
+			<pattern value="[0-9]{6}"></pattern>
+		</restriction>
+	</simpleType>
+	<simpleType name="StringLimit">
+		<restriction base="string">
+			<maxLength value="10"></maxLength>
+		</restriction>
+	</simpleType>
+	<simpleType name="GenderLimit">
+		<restriction base="string">
+			<enumeration value="M"></enumeration>
+			<enumeration value="F"></enumeration>
+		</restriction>
+	</simpleType>
+	
+
 </schema>

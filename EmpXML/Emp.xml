@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:employee xmlns:tns="http://bhargavramreddysanagala.me/Emp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bhargavramreddysanagala.me/Emp Emp.xsd ">
+  <tns:id>123456</tns:id>
+  <tns:firstname>tns:firstname</tns:firstname>
+  <tns:lastname>slkfjs</tns:lastname>
+  <tns:dob>2001-01-01</tns:dob>
+  <tns:gender>M</tns:gender>
+  <tns:salary>0.0</tns:salary>
+  <tns:Email>tns:Email</tns:Email>
+</tns:employee>
