@@ -6,7 +6,7 @@
 
 	<complexType name="emptype">
 		<sequence>
-			<element name="id" type="tns:ID" minOccurs="0" maxOccurs="2"/>
+			<element name="id" type="tns:ID" minOccurs="0" maxOccurs="2" />
 			<element name="firstname" type="string" />
 			<element name="lastname" type="tns:StringLimit" />
 			<element name="dob" type="date" />
