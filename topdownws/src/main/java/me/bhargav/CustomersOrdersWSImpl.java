@@ -22,7 +22,7 @@ public class CustomersOrdersWSImpl implements CustomerOrdersPortType {
 		Order order = new Order();
 		order.setId(BigInteger.valueOf(1));
 		Product product = new Product();
-		product.setDescription("IPhone");
+		product.setDescription("HTC ONE V");
 		product.setId("1");
 		product.setQuantity(BigInteger.valueOf(3));
 
